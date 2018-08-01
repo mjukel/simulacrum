@@ -45,7 +45,7 @@ lazy val commonSettings = Seq(
   scalacOptions in (Compile, console) ~= { _ filterNot { o => o == "-Ywarn-unused-import" || o == "-Xfatal-warnings" } },
   scalacOptions in (Test, console) := (scalacOptions in (Compile, console)).value,
   scalaVersion := "2.12.6",
-  crossScalaVersions := Seq("2.13.0-M4"),
+  crossScalaVersions := Seq("2.13.0-M4", "2.11.12"),
   resolvers ++= Seq(
     Resolver.sonatypeRepo("releases"),
     Resolver.sonatypeRepo("snapshots")
